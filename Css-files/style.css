@@ -166,7 +166,9 @@ h1,h2,h3 {
 .row .text-box {
     padding: 3rem;
     padding-top: 5rem; /* manually push content down to feel centered */
+    height : 100%
 }
+
 
 .row1 {
     margin-bottom: 10rem;
@@ -184,11 +186,6 @@ h1,h2,h3 {
 
 .row .img-box {
     height : 100%;
-}
-
-.row .text-box {
-    padding : 3rem;
-    height : 100%
 }
 
 
@@ -212,3 +209,141 @@ h1,h2,h3 {
 
 }
 
+
+                    /* ########################## FEATURE SECTION STYLING ############################## */
+
+.features {
+    background-color: #f9f9f9;
+    padding: 8rem 0;
+}
+
+/* --- Section Header --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a2a3a;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    padding : 0.5em;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: #777777;
+    letter-spacing: 0.03em;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* --- Box Wrapper --- */
+.box-wrapper {
+    overflow: hidden;  /* clearfix for floated boxes */
+}
+
+/* --- Individual Box --- */
+.box {
+    float: left;               /* sit boxes side by side */
+    width: 31.333%;            /* 3 boxes + gaps = roughly 31% each */
+    margin-right: 3%;          /* gap between boxes */
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    border: none;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* remove right margin from last box — prevents overflow */
+.box-3 {
+    margin-right: 0;
+}
+
+/* --- Icon Circle --- */
+.box-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #fff4e0;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;  /* centers circle + space below */
+    padding-top: 15px;           /* pushes icon down inside circle */
+    text-align: center;
+}
+
+.box-icon i {
+    font-size: 1.8rem;
+    color: #f0a500;
+}
+
+/* --- Box Text --- */
+.box-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a2a3a;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+}
+
+.box-text {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+/* --- Hover Effect --- */
+.box:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Clearfix --- */
+.box-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+
+                /* ############## FOOTER STYLING ########### */
+
+
+.footer {
+    background-color: #1a2a3a;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 2rem;
+}
+
+.social-media-links {
+    margin-bottom: 1rem;  /* gap between icons and copyright text */
+}
+
+
+.social-media-links a {
+    color: #f4f4f4;        /* matches footer text color */
+    text-decoration: none; /* removes underline */
+    transition: color 0.3s ease;
+}
+
+.social-media-links a:hover {
+    color: #f0a500; /* brand orange on hover */
+}
+
+
+
+.social-media-links i {
+    margin: 0.8rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-media-links i:hover {
+    color: #f0a500;  /* brand orange on hover */
+}
