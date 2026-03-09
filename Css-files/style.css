@@ -76,7 +76,7 @@ h1,h2,h3 {
 }
 
 /* LEARN THE CONCEPT OF UTILITY CLASSES  */
-
+                                            /* ##### UTILITY CLASS #####  */
 .text-red {
     color : #e63946;
 }
@@ -90,6 +90,11 @@ h1,h2,h3 {
     font-weight: 500;
     text-transform: uppercase;
     margin : 0.5em 0;
+}
+
+.bg-dark {
+    background-color: #333333;
+
 }
 
 .btn:hover {
@@ -346,4 +351,10 @@ h1,h2,h3 {
 
 .social-media-links i:hover {
     color: #f0a500;  /* brand orange on hover */
+}
+
+                            /* #### ABOUT STYLING #### */
+
+.about {
+    padding : 5 rem;
 }
