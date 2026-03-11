@@ -360,27 +360,76 @@ h1,h2,h3 {
                             /* #### ABOUT STYLING #### */
 
 .about {
-    padding : 5 rem;
+    padding: 5rem 0;
+    background-color: #ffffff;
 }
 
-/* .about-heading {
-    border-bottom : 4px solid #f0a500;
+/* --- Heading with orange underline --- */
+.about-heading {
+    font-size: 2rem;
+    font-weight: 700;
     
-} */
+}
 
 .about-heading::after {
     content: '';
-    display : block;
-    border : 3px solid #f0a500;
-    width : 100%;
+    display: block;
+    border-bottom: 2px solid #e63946;  /* red underline like image 1 */
+    width: 100%;
+    margin-bottom: 0.5em;
 }
 
-    .container-content {
-        text-align: left;
-        padding-left : 10rem;
-        margin-left: 2%;
-    }
+/* --- Paragraph --- */
+.container-paragraph p {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    margin-bottom: 2rem;
+}
 
-/* .container-paragraph p{
-    padding : 1rem 0 3rem 0;
-} */
+/* --- Two Column Points --- */
+.points-content {
+    overflow: hidden;  /* clearfix */
+}
+
+.points-content::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.column1s {
+    float: left;
+    width: 50%;
+}
+
+.column2s {
+    float: right;
+    width: 50%;
+}
+
+/* --- List Styling --- */
+.column1s ul,
+.column2s ul {
+    list-style: none;  /* removes default bullet */
+    padding: 0;
+    margin: 0;
+}
+
+.column1s li,
+.column2s li {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.02em;
+}
+
+/* --- Checkmark before each item --- */
+.column1s li::before,
+.column2s li::before {
+    content: '✓  ';    /* checkmark + space */
+    color: #e63946;    /* red — matches your brand */
+    font-weight: 700;
+    padding : 0.5em;
+}
