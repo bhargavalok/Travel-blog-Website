@@ -415,6 +415,7 @@ h1,h2,h3 {
     list-style: none;  /* removes default bullet */
     padding: 0;
     margin: 0;
+    
 }
 
 .column1s li,
@@ -432,4 +433,41 @@ h1,h2,h3 {
     color: #e63946;    /* red — matches your brand */
     font-weight: 700;
     padding : 0.5em;
+}
+
+
+/* .datafeat_container {
+    border : 2px solid red;
+    padding-left: 15%;
+    margin : 0.1rem;
+
+}
+.datafeat_items {
+    border : 2px solid blue;
+    text-align: left;
+}
+
+.c1,.c2 {
+    float : left;
+}
+
+.c3,.c4 {
+    float : right;
+} */
+
+.count {
+    border : 2px solid black;
+
+}
+
+.count_item {
+    float : left;
+    border : 2px solid red;
+    width : 25%;
+}
+
+.count::after {
+    content : '';
+    display : block;
+    clear : both;
 }
