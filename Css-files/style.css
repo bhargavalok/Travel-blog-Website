@@ -359,38 +359,38 @@ h1,h2,h3 {
 
                             /* #### ABOUT STYLING #### */
 
-.about {
-    padding: 5rem 0;
+/* .about {
+    padding: 3rem 0 5rem 0;
     background-color: #ffffff;
 }
 
 /* --- Heading with orange underline --- */
-.about-heading {
+/* .about-heading {
     font-size: 2rem;
     font-weight: 700;
-    
-}
+} */
 
-.about-heading::after {
+/* .about-heading::after {
     content: '';
     display: block;
     border-bottom: 2px solid #e63946;  /* red underline like image 1 */
-    width: 100%;
+    /* width: 100%;
     margin-bottom: 0.5em;
-}
+} */ */
 
 /* --- Paragraph --- */
-.container-paragraph p {
+/* .container-paragraph p {
     font-size: 1rem;
     color: #555555;
     line-height: 1.8;
     letter-spacing: 0.02em;
-    margin-bottom: 2rem;
-}
+    margin-bottom: 1rem;
+} */
 
 /* --- Two Column Points --- */
-.points-content {
+/* .points-content {
     overflow: hidden;  /* clearfix */
+    /* margin-bottom: 3rem;
 }
 
 .points-content::after {
@@ -410,64 +410,398 @@ h1,h2,h3 {
 }
 
 /* --- List Styling --- */
-.column1s ul,
+/* .column1s ul,
 .column2s ul {
     list-style: none;  /* removes default bullet */
-    padding: 0;
+    /* padding: 0;
     margin: 0;
-    
+} */ */
+
+/* .column1s li,
+.column2s li {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.02em;
+} */
+
+/* --- Checkmark before each item --- */
+/* .column1s li::before,
+.column2s li::before {
+    content: '✓  ';    /* checkmark + space */
+    /* color: #e63946;    /* red — matches your brand */
+    /* font-weight: 700;
+    padding : 0.5em; */ 
+/* } */ 
+
+
+/* .count { */
+    /* margin-top : 0;
+    padding: 2rem 0 3rem 10rem; /* equal top and bottom */
+    /* overflow: hidden;
+    border-top: 1px solid #eeeeee;
+    background-color: #ffffff; 
+    text-align: left;
+} */ */
+
+
+   /* padding: 3rem 0;
+    overflow: hidden;
+    border-top: 1px solid #eeeeee; */
+
+    /* .about  { background-color: #ffffff; }
+
+
+.count_item {
+    float : left;
+    width : 25%;
+    text-align: center;
+} */ 
+/* 
+.count::after {
+    content : '';
+    display : block;
+    clear : both;
 }
 
-.column1s li,
-.column2s li {
+.count_item span {
+    font-size: 2rem;
+    font-weight : 700;
+    color : #e63946;
+    line-height : 1.2;
+}
+
+.count_item p {
+    font-weight: 700;
+    color : #555;
+    font-size : 0.95rem;
+    margin-top: 0.3rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+
+.count_item p {
+    font-size: 0.95rem !important; /* forces it to win */
+/* } */
+
+/* .bg-dark {
+    background-color: #1a2a3a; /* your navy — softer than pure black */
+/* }   */
+
+                        /* ############ banner Styling ##############  */
+/* .cta-banner { */
+    /* background: linear-gradient(25deg, #d64c7f, #ee4758 50%); */
+    /* padding: 2.5rem 0 0 2rem; */
+    /* padding: 1rem; */
+    /* color : #f4f4f4;
+    box-shadow: 5px 5px 10px #00000057;
+    margin-top : 0;
+
+    background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+    padding: 2.5rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-banner-left {
+    width : 65%;
+    float : left;
+}
+
+
+.cta-banner-right {
+    width : 40%;
+    float : right;
+    text-align : right;
+    padding-top: 1.2rem; 
+}
+
+
+.cta-banner::after {
+    content : '';
+    display : block;
+    clear : both;
+} */
+/* 
+.cta-line {
+    font-weight: 700;
+    font-size : 2rem;
+    margin-top : 0rem;
+}
+
+.btn-cta {
+    text-align : center;
+    display : inline-block;
+    font-weight: 700;
+    font-size : 1rem;
+    text-transform: uppercase;
+    border : 2px solid white;
+    padding : 0.3em 2.5em;
+    letter-spacing : 0.5rem;
+    color : #f4f4f4;
+    text-decoration: none;
+} */
+
+/* .btn-cta:hover {
+    background-color: white;
+    color: #e63946;
+    transition: all 0.3s ease;
+} */
+
+/* 
+
+.cta-banner {
+    background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+    padding: 2.5rem 0;  /* zero left/right — container handles it */
+    /* color: #f4f4f4;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-top: 0; */
+/* } */
+
+/* override container padding specifically for banner */
+/* .cta-banner .container {
+    overflow: hidden;
+}
+
+.cta-banner-left {
+    float: left;
+    width: 65%;
+}
+
+.cta-banner-right {
+    float: right;
+    width: 35%;
+    text-align: right;
+    padding-top: 0.8rem;
+}
+
+.cta-banner::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.cta-line {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 0.5rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 0.8em 2em;
+    letter-spacing: 0.1rem;
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: white;
+    color: #e63946;
+}  */
+
+
+.about {
+    padding: 3rem 0 5rem 0;
+    background-color: #ffffff;
+}
+
+.about-heading {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about-heading::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #e63946;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.container-paragraph p {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+}
+
+.points-content {
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.points-content::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.column1s { float: left;  width: 50%; }
+.column2s { float: right; width: 50%; }
+
+.column1s ul, .column2s ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.column1s li, .column2s li {
     font-size: 1rem;
     color: #333333;
     margin-bottom: 0.8rem;
     letter-spacing: 0.02em;
 }
 
-/* --- Checkmark before each item --- */
-.column1s li::before,
-.column2s li::before {
-    content: '✓  ';    /* checkmark + space */
-    color: #e63946;    /* red — matches your brand */
+.column1s li::before, .column2s li::before {
+    content: '✓  ';
+    color: #e63946;
     font-weight: 700;
-    padding : 0.5em;
+    padding: 0.5em;
 }
 
-
-/* .datafeat_container {
-    border : 2px solid red;
-    padding-left: 15%;
-    margin : 0.1rem;
-
-}
-.datafeat_items {
-    border : 2px solid blue;
-    text-align: left;
-}
-
-.c1,.c2 {
-    float : left;
-}
-
-.c3,.c4 {
-    float : right;
-} */
-
+/* count */
 .count {
-    border : 2px solid black;
-
-}
-
-.count_item {
-    float : left;
-    border : 2px solid red;
-    width : 25%;
+    padding: 3rem 0;
+    overflow: hidden;
+    border-top: 1px solid #eeeeee;
+    background-color: #ffffff;
 }
 
 .count::after {
-    content : '';
-    display : block;
-    clear : both;
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.count_item {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.count_item span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e63946;
+    line-height: 1.2;
+}
+
+.count_item p {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #555;
+    margin-top: 0.3rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+    padding: 2.5rem 0;
+    color: #f4f4f4;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-top: 3rem;
+}
+
+.cta-banner .container-banner {
+    overflow: hidden;
+    padding: 0 40px;
+}
+
+.cta-banner-left {
+    float: left;
+    width: 60%;
+}
+
+.cta-banner-right {
+    float: right;
+    width: 40%;
+    text-align: right;
+    padding-top: 0.5rem;
+}
+
+.cta-banner::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.cta-line {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.btn-cta {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 0.8em 2.5em;
+    letter-spacing: 0.1rem;
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: white;
+    color: #e63946;
+}
+
+.bg-dark {
+    background-color: #1a2a3a;
+}
+
+
+.cta-banner .container-banner {
+    overflow: hidden;
+}
+
+.cta-banner-left {
+    float: left;
+    width: 60%;
+    padding-top: 0.5rem;
+}
+
+.cta-banner-right {
+    float: right;
+    width: 40%;
+    text-align: right;
+}
+
+.cta-line {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+
+.btn-cta {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 0.7em 2em;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: white;
+    color: #e63946;
 }
