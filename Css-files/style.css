@@ -1,42 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+                        /* ################## IMPORT ################  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+                            /* ########## RESET ############# */
 * {
-    margin : 0;
-    padding : 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+                            /* ################ BASE #############  */
 body {
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333333;
 }
 
-.headerog {
-    position: relative;
-   height : 98vh;
-   background : linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images-files/travel-hd.jpg");
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
+p, li {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.03em;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    letter-spacing: 0.05em;
+    font-weight: 600;
 }
 
 
-.logo-image {
-    float: left;
-    height: 60px;      /* control height */
-    width: auto;       /* let width scale automatically */
+                                /*   ################### UTILITY CLASSES  ######################## */
+.text-red    { color: #e63946; }
+.text-light  { color: #f4f4f4; }
+.text-black  { color: #333333; }
+.text-grey   { color: #555555; }
+.text-orange { color: #f0a500; }
+.bg-dark     { background-color: #1a2a3a; }
+
+                                    /* ########## BUTTON STYLING ##########  */
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: white;
+    border-radius: 10em;
+}
+
+.btn-primary:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-secondary {
+    border: 2px solid #e63946;
+    border-radius: 1.5em;
+    color: #e63946;
+}
+
+.btn-secondary:hover {
+    background-color: #e63946;
+    color: white;
 }
 
 
-.navbar {
-    overflow: hidden;
-    background: transparent; /* or whatever color */
-}
-
+                                        /*   ############## LAYOUT  ###############  */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 40px;
-    overflow: hidden; /* clearfix */
+    overflow: hidden;
+}
+
+
+                                            /*   ############ NAVBAR  ################ */
+.navbar {
+    overflow: hidden;
+}
+
+.logo-image {
+    float: left;
+    height: 60px;
+    width: auto;
 }
 
 .nav-items {
@@ -54,179 +102,105 @@ body {
 .nav-item a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
 }
 
-.navbar .nav-item a:hover {
-    border-bottom : 1px solid #f0a500;
+.nav-item a:hover {
+    color: #f0a500;
+    border-bottom: 0.5px solid #f0a500;
 }
 
 
-p,li {
-    font-size: 1.3rem;
-    margin-bottom: 0.5em;
-    letter-spacing: 0.15em;
+                                    /*  ################### HERO HEADER  ###################  */
+.headerog {
+    position: relative;
+    height: 98vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url("../images-files/travel-hd.jpg") center/cover no-repeat;
 }
-
-h1,h2,h3 {
-    margin-bottom: 0.5em;
-    letter-spacing: 0.15em;
-    font-weight: 500;
-}
-
-                                                /* LEARN THE CONCEPT OF UTILITY CLASSES  */
-
-
-
-
-                                            /* ##### UTILITY CLASS #####  */
-.text-red {
-    color : #e63946;
-}
-
-.text-light {
-    color : #f4f4f4;
-}
-.btn {
-    display: inline-block;
-    padding : 0.5em 1.5em;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin : 0.5em 0;
-}
-
-.bg-dark {
-    background-color: #333333;
-
-}
-
-.btn:hover {
-    background-color :#fcf3f2
-}
-
-.btn-primary {
-    background-color: white;
-    border-radius: 10em;
-}
-
-.btn-secondary {
-    border : 2px solid #e63946;
-    border-radius: 1.5em;
-    color : #e63946;
-    text-decoration: none;
-}
-
-.text-black {
-    color : #333333;
-}
-.text-grey {
-    color : #555555;
-}
-.text-orange {
-    color :#f0a500
-}
-
-
-/* ######################### header content styling ########################## */
 
 .header-content {
-    position : absolute;
-    /* border : 2px solid white; */
-    top : 50%;
-    left : 50%;
-    transform : translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    /* background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)); */
+    width: 80%;
 }
+
 .header-content h1 {
     text-transform: uppercase;
     font-weight: 700;
-    color : white
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
-
 
 .header-content p {
     text-transform: uppercase;
-    color : whitesmoke;
-    font-size : 1rem;
+    color: whitesmoke;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
 }
 
 
-.header-content a {
-    text-decoration: none;
-    font-weight: bold;
-    background: #f4f4f4;
-}
-
-
-/* ##################################### SHOWCASE SECTION STYLE ######################  */
+                                    /* ##################  SHOWCASE SECTION  ################## */
 .showcase {
-    background: #ddd;
-    padding : 10rem 0;
-
+    background: #f0f0f0;
+    padding: 8rem 0;
 }
 
 .row {
-    height : 350px;
+    height: 350px;
     background-color: white;
-    box-shadow: 0px 0px 20px 0px #aaa;
-}
-.row .text-box {
-    padding: 3rem;
-    padding-top: 5rem; /* manually push content down to feel centered */
-    height : 100%
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
 }
 
+.row1 { margin-bottom: 6rem; }
 
-.row1 {
-    margin-bottom: 10rem;
-}
-
-.row1 .img-box, .row2 .text-box{
-    float : left;
-    width : 50%;
-}
-
-.row2 .img-box, .row1 .text-box{
-    float : right;
-    width : 50%;
-}
+.row1 .img-box, .row2 .text-box { float: left;  width: 50%; }
+.row2 .img-box, .row1 .text-box { float: right; width: 50%; }
 
 .row .img-box {
-    height : 100%;
+    height: 100%;
 }
 
-
-
 .row .img-box img {
-    display : inline-block;
-    width : 100%;
-    height : 100%;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.row::after {
-    content : '';
-    display : block;
-    clear : both;
+.row .text-box {
+    padding: 3rem;
+    height: 100%;
+    padding-top: 4rem;
 }
 
-.text-box p {
+.row .text-box p {
     font-size: 1rem;
-    line-height: 1.7;  /*Improved Readability ! */
+    line-height: 1.7;
+    color: #555555;
+    letter-spacing: 0.02em;
+}
 
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 
-                    /* ########################## FEATURE SECTION STYLING ############################## */
-
+                            /* ##########  FEATURES SECTION ########## */
 .features {
     background-color: #f9f9f9;
     padding: 8rem 0;
 }
 
-/* --- Section Header --- */
 .section-header {
     text-align: center;
     margin-bottom: 5rem;
@@ -238,7 +212,6 @@ h1,h2,h3 {
     color: #1a2a3a;
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
-    padding : 0.5em;
 }
 
 .section-subtitle {
@@ -250,37 +223,41 @@ h1,h2,h3 {
     line-height: 1.7;
 }
 
-/* --- Box Wrapper --- */
 .box-wrapper {
-    overflow: hidden;  /* clearfix for floated boxes */
+    overflow: hidden;
 }
 
-/* --- Individual Box --- */
+.box-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 .box {
-    float: left;               /* sit boxes side by side */
-    width: 31.333%;            /* 3 boxes + gaps = roughly 31% each */
-    margin-right: 3%;          /* gap between boxes */
+    float: left;
+    width: 31.333%;
+    margin-right: 3%;
     background-color: #ffffff;
     border-radius: 12px;
     padding: 3rem 2rem;
     text-align: center;
-    border: none;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+    transition: box-shadow 0.3s ease;
 }
 
-/* remove right margin from last box — prevents overflow */
-.box-3 {
-    margin-right: 0;
+.box-3 { margin-right: 0; }
+
+.box:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
-/* --- Icon Circle --- */
 .box-icon {
     width: 70px;
     height: 70px;
     background-color: #fff4e0;
     border-radius: 50%;
-    margin: 0 auto 1.5rem auto;  /* centers circle + space below */
-    padding-top: 15px;           /* pushes icon down inside circle */
+    margin: 0 auto 1.5rem auto;
+    padding-top: 15px;
     text-align: center;
 }
 
@@ -289,7 +266,6 @@ h1,h2,h3 {
     color: #f0a500;
 }
 
-/* --- Box Text --- */
 .box-title {
     font-size: 1.2rem;
     font-weight: 700;
@@ -305,310 +281,10 @@ h1,h2,h3 {
     letter-spacing: 0.02em;
 }
 
-/* --- Hover Effect --- */
-.box:hover {
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
 
-/* --- Clearfix --- */
-.box-wrapper::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-
-
-
-                /* ############## FOOTER STYLING ########### */
-
-
-.footer {
-    background-color: #1a2a3a;
-    color: #f4f4f4;
-    text-align: center;
-    padding: 2rem;
-}
-
-.social-media-links {
-    margin-bottom: 1rem;  /* gap between icons and copyright text */
-}
-
-
-.social-media-links a {
-    color: #f4f4f4;        /* matches footer text color */
-    text-decoration: none; /* removes underline */
-    transition: color 0.3s ease;
-}
-
-.social-media-links a:hover {
-    color: #f0a500; /* brand orange on hover */
-}
-
-
-
-.social-media-links i {
-    margin: 0.8rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.social-media-links i:hover {
-    color: #f0a500;  /* brand orange on hover */
-}
-
-                            /* #### ABOUT STYLING #### */
-
-/* .about {
-    padding: 3rem 0 5rem 0;
-    background-color: #ffffff;
-}
-
-/* --- Heading with orange underline --- */
-/* .about-heading {
-    font-size: 2rem;
-    font-weight: 700;
-} */
-
-/* .about-heading::after {
-    content: '';
-    display: block;
-    border-bottom: 2px solid #e63946;  /* red underline like image 1 */
-    /* width: 100%;
-    margin-bottom: 0.5em;
-} */ */
-
-/* --- Paragraph --- */
-/* .container-paragraph p {
-    font-size: 1rem;
-    color: #555555;
-    line-height: 1.8;
-    letter-spacing: 0.02em;
-    margin-bottom: 1rem;
-} */
-
-/* --- Two Column Points --- */
-/* .points-content {
-    overflow: hidden;  /* clearfix */
-    /* margin-bottom: 3rem;
-}
-
-.points-content::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.column1s {
-    float: left;
-    width: 50%;
-}
-
-.column2s {
-    float: right;
-    width: 50%;
-}
-
-/* --- List Styling --- */
-/* .column1s ul,
-.column2s ul {
-    list-style: none;  /* removes default bullet */
-    /* padding: 0;
-    margin: 0;
-} */ */
-
-/* .column1s li,
-.column2s li {
-    font-size: 1rem;
-    color: #333333;
-    margin-bottom: 0.8rem;
-    letter-spacing: 0.02em;
-} */
-
-/* --- Checkmark before each item --- */
-/* .column1s li::before,
-.column2s li::before {
-    content: '✓  ';    /* checkmark + space */
-    /* color: #e63946;    /* red — matches your brand */
-    /* font-weight: 700;
-    padding : 0.5em; */ 
-/* } */ 
-
-
-/* .count { */
-    /* margin-top : 0;
-    padding: 2rem 0 3rem 10rem; /* equal top and bottom */
-    /* overflow: hidden;
-    border-top: 1px solid #eeeeee;
-    background-color: #ffffff; 
-    text-align: left;
-} */ */
-
-
-   /* padding: 3rem 0;
-    overflow: hidden;
-    border-top: 1px solid #eeeeee; */
-
-    /* .about  { background-color: #ffffff; }
-
-
-.count_item {
-    float : left;
-    width : 25%;
-    text-align: center;
-} */ 
-/* 
-.count::after {
-    content : '';
-    display : block;
-    clear : both;
-}
-
-.count_item span {
-    font-size: 2rem;
-    font-weight : 700;
-    color : #e63946;
-    line-height : 1.2;
-}
-
-.count_item p {
-    font-weight: 700;
-    color : #555;
-    font-size : 0.95rem;
-    margin-top: 0.3rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-
-.count_item p {
-    font-size: 0.95rem !important; /* forces it to win */
-/* } */
-
-/* .bg-dark {
-    background-color: #1a2a3a; /* your navy — softer than pure black */
-/* }   */
-
-                        /* ############ banner Styling ##############  */
-/* .cta-banner { */
-    /* background: linear-gradient(25deg, #d64c7f, #ee4758 50%); */
-    /* padding: 2.5rem 0 0 2rem; */
-    /* padding: 1rem; */
-    /* color : #f4f4f4;
-    box-shadow: 5px 5px 10px #00000057;
-    margin-top : 0;
-
-    background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
-    padding: 2.5rem 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.cta-banner-left {
-    width : 65%;
-    float : left;
-}
-
-
-.cta-banner-right {
-    width : 40%;
-    float : right;
-    text-align : right;
-    padding-top: 1.2rem; 
-}
-
-
-.cta-banner::after {
-    content : '';
-    display : block;
-    clear : both;
-} */
-/* 
-.cta-line {
-    font-weight: 700;
-    font-size : 2rem;
-    margin-top : 0rem;
-}
-
-.btn-cta {
-    text-align : center;
-    display : inline-block;
-    font-weight: 700;
-    font-size : 1rem;
-    text-transform: uppercase;
-    border : 2px solid white;
-    padding : 0.3em 2.5em;
-    letter-spacing : 0.5rem;
-    color : #f4f4f4;
-    text-decoration: none;
-} */
-
-/* .btn-cta:hover {
-    background-color: white;
-    color: #e63946;
-    transition: all 0.3s ease;
-} */
-
-/* 
-
-.cta-banner {
-    background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
-    padding: 2.5rem 0;  /* zero left/right — container handles it */
-    /* color: #f4f4f4;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    margin-top: 0; */
-/* } */
-
-/* override container padding specifically for banner */
-/* .cta-banner .container {
-    overflow: hidden;
-}
-
-.cta-banner-left {
-    float: left;
-    width: 65%;
-}
-
-.cta-banner-right {
-    float: right;
-    width: 35%;
-    text-align: right;
-    padding-top: 0.8rem;
-}
-
-.cta-banner::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.cta-line {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 0;
-    padding-top: 0.5rem;
-}
-
-.btn-cta {
-    display: inline-block;
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border: 2px solid white;
-    padding: 0.8em 2em;
-    letter-spacing: 0.1rem;
-    color: #f4f4f4;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-cta:hover {
-    background-color: white;
-    color: #e63946;
-}  */
-
-
+                                        /* ############# ABOUT PAGE STYLING  ############ */
 .about {
-    padding: 3rem 0 5rem 0;
+    padding: 3rem 0 0 0;
     background-color: #ffffff;
 }
 
@@ -622,7 +298,7 @@ h1,h2,h3 {
     display: block;
     border-bottom: 2px solid #e63946;
     width: 100%;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5rem;
 }
 
 .container-paragraph p {
@@ -630,12 +306,12 @@ h1,h2,h3 {
     color: #555555;
     line-height: 1.8;
     letter-spacing: 0.02em;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .points-content {
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 }
 
 .points-content::after {
@@ -667,12 +343,20 @@ h1,h2,h3 {
     padding: 0.5em;
 }
 
-/* count */
+
+/* ================================
+   COUNT SECTION
+================================ */
 .count {
     padding: 3rem 0;
     overflow: hidden;
     border-top: 1px solid #eeeeee;
     background-color: #ffffff;
+    margin-top: 3rem;
+}
+
+.count .container {
+    overflow: hidden;
 }
 
 .count::after {
@@ -689,45 +373,50 @@ h1,h2,h3 {
 
 .count_item span {
     display: block;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #e63946;
     line-height: 1.2;
 }
 
 .count_item p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    color: #555;
-    margin-top: 0.3rem;
-    letter-spacing: 0.05em;
+    color: #555555;
+    margin-top: 0.4rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
-/* CTA Banner */
+
+/* ================================
+   CTA BANNER
+================================ */
 .cta-banner {
     background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
-    padding: 2.5rem 0;
+    padding: 1.2rem 0;
     color: #f4f4f4;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    margin-top: 3rem;
+    margin-top: 0;
 }
 
-.cta-banner .container-banner {
+.cta-banner .container {
+    display: table;
+    width: 100%;
     overflow: hidden;
-    padding: 0 40px;
 }
 
 .cta-banner-left {
-    float: left;
-    width: 60%;
+    display: table-cell;
+    width: 65%;
+    vertical-align: middle;
 }
 
 .cta-banner-right {
-    float: right;
-    width: 40%;
+    display: table-cell;
+    width: 35%;
+    vertical-align: middle;
     text-align: right;
-    padding-top: 0.5rem;
 }
 
 .cta-banner::after {
@@ -737,64 +426,20 @@ h1,h2,h3 {
 }
 
 .cta-line {
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin: 0;
-}
-
-.btn-cta {
-    display: inline-block;
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border: 2px solid white;
-    padding: 0.8em 2.5em;
-    letter-spacing: 0.1rem;
-    color: #f4f4f4;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-cta:hover {
-    background-color: white;
-    color: #e63946;
-}
-
-.bg-dark {
-    background-color: #1a2a3a;
-}
-
-
-.cta-banner .container-banner {
-    overflow: hidden;
-}
-
-.cta-banner-left {
-    float: left;
-    width: 60%;
-    padding-top: 0.5rem;
-}
-
-.cta-banner-right {
-    float: right;
-    width: 40%;
-    text-align: right;
-}
-
-.cta-line {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin: 0;
     color: white;
+    letter-spacing: 0.02em;
 }
 
 .btn-cta {
     display: inline-block;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     border: 2px solid white;
-    padding: 0.7em 2em;
+    padding: 0.8em 2em;
     letter-spacing: 0.1rem;
     color: white;
     text-decoration: none;
@@ -804,4 +449,69 @@ h1,h2,h3 {
 .btn-cta:hover {
     background-color: white;
     color: #e63946;
+}
+
+
+                                        /*   ###############    FOOTER  STYLIING  ############# */
+.footer {
+    background-color: #1a2a3a;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.social-media-links {
+    margin-bottom: 1rem;
+}
+
+.social-media-links a {
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media-links a:hover {
+    color: #f0a500;
+}
+
+.social-media-links i {
+    margin: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer p {
+    font-size: 1rem;
+    color: #aaaaaa;
+    letter-spacing: 0.05em;
+}
+
+                            /* ######### CONTACT PAGE STYLING #################  */
+.contact-form {
+    padding : 5rem 0;
+    font-size: 2rem;
+}
+
+.form-wrapper {
+    border : 10px solid red;
+}
+
+
+.form-wrapper::after {
+    content : '';
+    display : block;
+    clear : both;
+}
+
+
+.company-adress {
+    border : 4px dotted green;
+    width : 49%;
+    float : left;
+}
+
+.form {
+    border : 4px dotted black;
+    width : 49%;
+    float : right;
 }
