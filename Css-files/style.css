@@ -659,3 +659,140 @@ h1, h2, h3 {
     margin-top: 1rem;
     margin-bottom: 0;
 }
+
+
+            /* #### MEDIA QUERIES ######### */
+@media screen and (max-width: 768px) {
+    html { font-size: 55%; }
+
+    /* --- Navbar --- */
+    .logo-image {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .nav-items {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    /* --- Hero --- */
+    .header-content {
+        width: 95%;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    /* --- Showcase --- */
+    .row {
+        height: auto;           /* remove fixed height */
+    }
+
+    .row1 .img-box,
+    .row2 .img-box,
+    .row1 .text-box,
+    .row2 .text-box {
+        float: none;
+        width: 100%;            /* full width — stack vertically */
+    }
+
+    .row .img-box {
+        height: 250px;          /* give image fixed height when stacked */
+    }
+
+    .row .text-box {
+        padding: 2rem;
+        padding-top: 2rem;      /* reset manual top padding */
+        height: auto;
+    }
+
+    .row1 { margin-bottom: 4rem; }
+
+    /* --- Features --- */
+    .box {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    /* --- About counts --- */
+    .count_item {
+        width: 50%;             /* 2 per row instead of 4 */
+        margin-bottom: 2rem;
+    }
+
+    /* --- CTA Banner --- */
+    .cta-banner-left,
+    .cta-banner-right {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta-banner-right {
+        margin-top: 1rem;
+        padding-top: 0;
+    }
+
+    /* --- Contact --- */
+    .form-wrapper .company-address,
+    .form-wrapper .form {
+        float: none;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* ================================
+   MOBILE — 480px and below
+================================ */
+@media screen and (max-width: 480px) {
+
+    html { font-size: 45%; }
+
+    /* --- Hero --- */
+    .header-content h1 { font-size: 1.8rem; }
+    .header-content p  { font-size: 0.9rem; letter-spacing: 0.05em; }
+
+    /* --- Navbar — stack logo above links --- */
+    .nav-items { margin-top: 0.5rem; }
+    .nav-item  { margin: 0 8px; }
+    .nav-item a { font-size: 14px; }
+
+    /* --- Section titles --- */
+    .section-title  { font-size: 1.6rem; }
+    .about-heading  { font-size: 1.5rem; }
+    .form-title     { font-size: 1.3rem; }
+
+    /* --- Showcase --- */
+    .row .img-box { height: 200px; }
+
+    /* --- About checklist --- */
+    .column1s,
+    .column2s {
+        float: none;
+        width: 100%;
+    }
+
+    /* --- Count — all 4 stacked --- */
+    .count_item {
+        width: 50%;
+    }
+
+    /* --- CTA text smaller --- */
+    .cta-line { font-size: 0.9rem; }
+
+    /* --- Contact form --- */
+    .form-wrapper .form { padding: 1.5rem; }
+    .form-wrapper .company-address { padding: 1.5rem; }
+}
