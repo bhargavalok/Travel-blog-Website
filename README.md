@@ -125,7 +125,7 @@ This project taught me how to think in layouts — breaking every design into ne
 The biggest lesson was understanding that clean, readable code matters just as much as working code — especially when you come back to fix something three days later.
 
 🔗 Live Demo
-(Add your GitHub Pages link here once deployed)
+https://travel-blog-website-wheat.vercel.app/
 
 👤 Author
 Alok Bhargav
